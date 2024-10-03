@@ -1,0 +1,71 @@
+body {
+    height: 100vh;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    text-align: center; /* Posisikan teks di tengah */
+    justify-content: center;
+    filter: brightness(30%);
+    background-image: linear-gradient(to right, #DECBA4, #3E5151);
+}
+p {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: justify;
+  display: flex;
+  height: 100vh;
+  color: rgb(250, 8, 0);
+  text-shadow: 5px 5px 2px rgb(73, 73, 73);
+  font-size: 50px;
+}
+h1 {
+    font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      text-align: justify;
+      display: flex;
+      height: 100vh;
+      color: rgb(250, 8, 0);
+      text-shadow: 5px 5px 2px rgb(73, 73, 73);
+      font-size: 75px;
+}
+h2 {
+    font-family: Arial, sans-serif;
+      justify-content: center;
+      align-items: center;
+}
+.content {
+    opacity: 0;
+    animation: fadeSlideIn 2s ease forwards;
+  }
+
+  /* Keyframes untuk animasi */
+@keyframes fadeSlideIn {
+    0% {
+      opacity: 0;
+      transform: translateX(100%);
+    }
+    100% {
+      opacity: 1;
+      transform: translateX(0);
+    }
+}
+/* CSS untuk menyembunyikan elemen pada awalnya */
+.hidden {
+  opacity: 0;
+  transform: translateX(50px); /* Geser teks ke bawah */
+  transition: opacity 2s ease-out, transform 2s ease-out;
+}
+
+/* CSS untuk menampilkan elemen saat elemen masuk ke viewport */
+.show {
+  opacity: 1;
+  transform: translateX(0); /* Kembalikan ke posisi asli */
+}
